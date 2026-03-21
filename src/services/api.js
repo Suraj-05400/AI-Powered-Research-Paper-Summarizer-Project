@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { useAuthStore } from '../context/store.js'; // Import your store
 
-const API_BASE_URL = 'http://127.0.0.1:8000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL ||'http://127.0.0.1:8000';
 
 const apiClient = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: `${API_BASE_URL}/api`,
   headers: {
     'Content-Type': 'application/json',
   },
@@ -30,9 +30,12 @@ apiClient.interceptors.response.use(
     //useAuthStore.getState().setToken(null);
     //useAuthStore.getState().setUser(null);
       useAuthStore.getState().logout(); 
-      window.location.href = '/login';
+      if (window.location.pathname !== '/login') {
+        window.location.href = '/login';
+      }
+    //window.location.href = '/login';
     }
-    return Promise.reject(error);
+    return Promise.reject(error); 
   }
 );
 
