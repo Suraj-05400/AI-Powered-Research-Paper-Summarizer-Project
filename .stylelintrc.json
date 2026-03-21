@@ -1,0 +1,19 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "layer",
+          "apply",
+          "responsive",
+          "screen"
+        ]
+      }
+    ],
+    "declaration-block-no-duplicate-custom-properties": null,
+    "no-invalid-double-slash-comments": null
+  }
+}
