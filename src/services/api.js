@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useAuthStore } from '../context/store.js'; // Import your store
 
-const API_BASE_URL = import.meta.env.VITE_API_URL ||'http://127.0.0.1:8000'||'https://ai-powered-research-paper-summarizer.onrender.com/';
+const API_BASE_URL = 'https://ai-powered-research-paper-summarizer.onrender.com/'|| import.meta.env.VITE_API_URL ||'http://127.0.0.1:8000'||'https://ai-powered-research-paper-summarizer.onrender.com/';
 
 const apiClient = axios.create({
   baseURL: `${API_BASE_URL}/api`,
