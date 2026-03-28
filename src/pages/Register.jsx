@@ -23,9 +23,9 @@ export const Register = () => {
     window.location.href = `${API_URL}/api/auth/google`;
   }
 
- # function handleGoogleAuth() {
- #   window.location.href = "http://localhost:8000/api/auth/google";
- # }
+ // function handleGoogleAuth() {
+ // window.location.href = "http://localhost:8000/api/auth/google";
+ // }
 
   const handleGithubAuth = () => {
     window.location.href = "http://localhost:8000/api/auth/github";
