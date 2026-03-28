@@ -38,8 +38,11 @@ export const Login = () => {
 
   // --- FIX 2: Connect Social Buttons to Backend ---
   const handleSocialLogin = (provider) => {
+     const base = import.meta.env.VITE_API_URL ||'https://ai-powered-research-paper-summarizer.onrender.com';
+     window.location.href = `${base}/api/auth/${provider}`;
+//};
     // This triggers the RedirectResponse in your FastAPI auth.py
-    window.location.href = `http://localhost:8000/api/auth/${provider}`;
+  // window.location.href = `http://localhost:8000/api/auth/${provider}`;
   };
 
   const handleSubmit = async (e) => {
