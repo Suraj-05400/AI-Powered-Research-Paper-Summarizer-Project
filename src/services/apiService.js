@@ -3,7 +3,7 @@ import apiClient from './api';
 // Authentication Services
 export const authService = {
   register: (email, password, confirmPassword, fullName, phoneNumber) =>
-    apiClient.post('/auth/register/', {
+    apiClient.post('/auth/register', {
       email,
       password,
       confirm_password: confirmPassword,
