@@ -17,10 +17,15 @@ export const Register = () => {
     phoneNumber: '', // Added this to match backend requirement
   });
   const [isLoading, setIsLoading] = useState(false);
+  const API_URL = "https://ai-powered-research-paper-summarizer.onrender.com";
 
   function handleGoogleAuth() {
-    window.location.href = "http://localhost:8000/api/auth/google";
+    window.location.href = `${API_URL}/api/auth/google`;
   }
+
+ # function handleGoogleAuth() {
+ #   window.location.href = "http://localhost:8000/api/auth/google";
+ # }
 
   const handleGithubAuth = () => {
     window.location.href = "http://localhost:8000/api/auth/github";
