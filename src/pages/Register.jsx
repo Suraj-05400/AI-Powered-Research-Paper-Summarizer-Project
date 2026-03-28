@@ -28,7 +28,7 @@ export const Register = () => {
  // }
 
   const handleGithubAuth = () => {
-    window.location.href = "http://localhost:8000/api/auth/github";
+    window.location.href = "${API_URL}/api/auth/github";
   };
 
   const handleSubmit = async (e) => {
