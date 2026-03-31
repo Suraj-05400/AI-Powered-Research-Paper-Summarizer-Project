@@ -8,9 +8,9 @@ const Sidebar = ({ isOpen }) => {
 
   const menuItems = [
     { name: 'Dashboard', icon: <FiHome />, path: '/dashboard' },
-    { name: 'Upload Paper', icon: <FiUpload />, path: '/dashboard/upload' },
-    { name: 'Analytics', icon: <FiBarChart2 />, path: '/dashboard/analytics' },
-    { name: 'Settings', icon: <FiSettings />, path: '/dashboard/settings' },
+    { name: 'Upload Paper', icon: <FiUpload />, path: '/upload' },
+    { name: 'Analytics', icon: <FiBarChart2 />, path: '/analytics' },
+    { name: 'Settings', icon: <FiSettings />, path: '/settings' },
   ];
 
   return (
